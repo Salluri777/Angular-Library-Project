@@ -1,0 +1,22 @@
+article{
+    font-family: sans-serif;
+}
+.header{
+    display:flex;
+    justify-content: space-around;
+    gap:15%;
+    padding:20px;
+    background-color:hsl(240, 82%, 9%,0.9);
+    color:white;
+    
+}
+.paths{
+    display:flex;
+    gap:30px;
+    margin-top:10px;
+    font-weight:bold;   
+}
+a{
+    color:white;
+}
+

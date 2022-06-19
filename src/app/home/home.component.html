@@ -1,0 +1,24 @@
+<section>
+<h2 *ngIf="!success" class="books-head"><strong> Welcome to the world of books</strong> </h2>
+<h2 *ngIf="success" class="books-head"><strong>Hello {{username}} , Welcome to the world of books</strong> </h2>
+<div class="available">
+<div class="books" *ngFor="let boo of Booksdata">
+  <div class="image-body">
+    <a href="#"><img src="assets/{{boo.imageLink}}" alt="image" height="100px" width="80px"></a>
+  </div>
+  <div>
+    <ul>
+      <li><strong>Title</strong> : {{boo.title}}</li>
+      <li><Strong>Author</Strong> : {{boo.author}}</li>
+      <li><strong>Country</strong> : {{boo.country}}</li>
+      <li><strong>Language</strong> : {{boo.language}}</li>
+      <li><strong>Year</strong> : {{boo.year}}</li>
+      <li><a href="{{boo.link}}" target="_blank">More Details</a></li>
+    </ul>
+  </div>
+  <button (click)="wishList(boo)" class="btn btn-success"> Add to WishList</button>
+  <button (click)="completed(boo)" class="btn btn-success">Add to Completed</button> 
+</div>
+</div>
+</section>
+

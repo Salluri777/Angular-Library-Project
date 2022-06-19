@@ -1,0 +1,25 @@
+<section>
+    <form #userform="ngForm" (ngSubmit)="register()" id="form_login">
+      <div *ngIf="!success" class="formclass">
+        <p class="reghead">Registration</p>
+        <div ><label>Username :&nbsp;&nbsp;</label>
+        <input class="inputelement" type="text" name="username" required #usernameControl="ngModel" [(ngModel)]="username" placeholder="Enter the username"><br></div>
+        <p *ngIf="usernameControl.touched && usernameControl.invalid">Username required</p>
+        <div><label>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</label>
+          <input class="inputelement" type="Email" name="Email" autocomplete="on" required #EmailControl="ngModel" [(ngModel)]="Email" placeholder="Enter the email"><br>
+          <p *ngIf="EmailControl.touched && EmailControl.invalid">Email required</p></div>
+        <div><label>Password&nbsp;:&nbsp;&nbsp; </label>
+        <input class="inputelement" type="password" name="password" autocomplete="on" required #passwordControl="ngModel" [(ngModel)]="password" placeholder="Enter the password"><br>
+        <p *ngIf="passwordControl.touched && passwordControl.invalid">Password required</p></div>
+        <div ><label>Phone&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</label>
+        <input class="inputelement" type="phone" name="phone" autocomplete="on" required #phoneControl="ngModel" [(ngModel)]="phone" placeholder="Enter the Phone number"><br>
+        <p *ngIf="phoneControl.touched && phoneControl.invalid">Phone Number required</p></div>
+       
+        <p *ngIf="userform.invalid && onClick">Enter the correct credentials</p>
+        <p *ngIf="userexist">UserAlready exists</p>
+        <button [disabled]="!userform.valid" class="btn btn-success" id="just" type="submit">Register</button><br>
+        <p class="nreg"> Already have an account? <a routerLink="/login">Login</a></p>
+      </div>
+    </form>
+    <h2 *ngIf="success" class="logouthead"><a style="color:darkblue;cursor:pointer;text-decoration: underline;"(click)="logout()">Logout</a> to register as new user</h2>
+    </section>

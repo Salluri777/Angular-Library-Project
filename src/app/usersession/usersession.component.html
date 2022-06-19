@@ -1,0 +1,2 @@
+<p *ngIf="!loggedin()"> <a routerLink="/login">Login</a></p>
+    <p *ngIf="loggedin()"><a  style="cursor:pointer" (click)="logout()">Logout</a></p>

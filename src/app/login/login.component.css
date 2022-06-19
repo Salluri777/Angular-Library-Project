@@ -1,0 +1,52 @@
+.formclass{
+    margin-top:40px;
+    padding-left:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border:3px solid black;
+    height:500px;
+    width:400px;
+    font-weight:bold;
+    gap:5px;
+    background-color:hsl(240, 82%, 9%,0.8);
+    color:white;
+    
+}
+#form_login {
+    left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+}
+section{
+    font-family:sans-serif;
+}
+p{
+    color:red;
+    font-weight:normal;
+    font-size:12px;
+}
+.inputelement{
+    border-radius:5px;
+    height:40px;
+    width:200px;
+    text-align:center;
+}
+.btn{
+    background-color:green;
+    color:white;
+    width:80px;
+
+}
+a{
+    color:white;
+    text-decoration: underline;
+}
+.nreg{
+    color:green;
+    font-size:15px;
+    font-weight:bold;
+}
+

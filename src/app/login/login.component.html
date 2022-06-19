@@ -1,0 +1,17 @@
+<section>
+    <form #userform="ngForm" (ngSubmit)="login()" id="form_login">
+      <div *ngIf="!success" class="formclass">
+        <h2 style="font-weight:bold;padding-bottom:10px">Log in </h2>
+        <label>Enter the Username:</label>
+        <input class="inputelement" type="text" name="username" required #usernameControl="ngModel" [(ngModel)]="username" placeholder="Username"><br>
+        <p *ngIf="usernameControl.touched && usernameControl.invalid">Username required</p>
+        <label>Password</label>
+        <input class="inputelement" type="password" name="password" autocomplete="on" required #passwordControl="ngModel" [(ngModel)]="password" placeholder="password"><br>
+        <p *ngIf="passwordControl.touched && passwordControl.invalid">Password required</p>
+        <p *ngIf="userform.valid && !success && onclick">Enter the correct credentials</p>
+        <button class="btn" type="submit">login</button><br>
+        <p class="nreg"> Not registered yet ? <a routerLink="/register">Register</a></p>
+      </div>
+    </form>
+    </section>
+    

@@ -1,0 +1,42 @@
+.books-head{
+    text-align-last: center;
+    padding-top:10px;
+}
+a:hover img{
+    transform:scale(3);
+}
+.books{
+    margin:25px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    justify-content: center;;
+    align-items:center;   
+    border:2px solid black;
+}
+.Wishlist{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+section{
+    font-family:sans-serif;
+}
+.loginhead{
+    font-weight:bold;
+    color:darkcyan;
+    text-align:center;
+    padding-top:100px;
+}
+a{
+    color:darkcyan;
+    text-decoration: underline;
+}
+a:hover{
+    color:crimson;
+}
+#addfeature{
+    position:absolute;
+    top:15%;
+    right:5%;
+}

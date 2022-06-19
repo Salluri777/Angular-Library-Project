@@ -1,0 +1,26 @@
+
+<section >
+    <div *ngIf="success">
+  <h2 class="books-head"><strong>Welcome to Your Wishlist</strong> </h2>
+  <button id="addfeature" (click)="addmore()" class="btn btn-success">Add More to wishlist</button>
+    <div class="Wishlist">
+    <div class="books" *ngFor="let boo of wishListBooks">
+      <div class="image-body">
+        <a href="#"><img src="assets/{{boo.imageLink}}" alt="image" height="100px" width="80px"></a>
+      </div>
+      <div>
+        <ul>
+          <li><strong>Title</strong> : {{boo.title}}</li>
+          <li><Strong>Author</Strong> : {{boo.author}}</li>
+          <li><strong>Country</strong> : {{boo.country}}</li>
+          <li><strong>Language</strong> : {{boo.language}}</li>
+          <li><strong>Year</strong> : {{boo.year}}</li>
+          <li><a href="{{boo.link}}" target="_blank">More Details</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <h2 *ngIf="!success" class="loginhead"><a routerLink="/login">Login</a> to see your wishlist</h2>
+  </section>
+  
